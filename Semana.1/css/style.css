@@ -1,0 +1,73 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.DivTitulo {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.DivPassos {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+.DivPassos p {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.DivPassos > div {
+    margin-top: 15px;
+}
+
+.DivPassos > div > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.DivPassos > div > ul > li {
+    margin-bottom: 10px;
+}
+
+/* Estilizar checkbox */
+.DivPassos > div > ul > li > input[type="checkbox"] {
+    display: none;
+}
+
+.DivPassos > div > ul > li > label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    line-height: 1.5;
+}
+
+.DivPassos > div > ul > li > label:before {
+    content: "[ ]";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    color: #3498db;
+    transition: all 0.3s;
+}
+
+.DivPassos > div > ul > li > input[type="checkbox"]:checked + label:before {
+    content: "[x]";
+    color: #2ecc71;
+}
+
+/* Adicionar animação ao marcar/desmarcar */
+.DivPassos > div > ul > li > input[type="checkbox"]:checked + label:before,
+.DivPassos > div > ul > li > input[type="checkbox"]:not(:checked) + label:before {
+    transform: scale(1.2);
+}
+
